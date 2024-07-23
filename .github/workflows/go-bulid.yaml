@@ -16,7 +16,7 @@ jobs:
 
     strategy:
       matrix:
-        os: [ubuntu-latest, windows-latest, macos-latest]
+        os: [ubuntu-latest, windows-latest]
 
     steps:
       - name: Checkout code
@@ -55,13 +55,6 @@ jobs:
         uses: actions/download-artifact@v2
         with:
           name: myapp-windows-latest
-          path: ./artifacts
-        continue-on-error: true
-
-      - name: Download artifacts (macOS)
-        uses: actions/download-artifact@v2
-        with:
-          name: myapp-macos-latest
           path: ./artifacts
         continue-on-error: true
 
