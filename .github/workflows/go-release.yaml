@@ -12,17 +12,8 @@ permissions:
   contents: write
 
 jobs:
-  build:
+  goreleaser:
     runs-on: ubuntu-latest
-
-    # Default: [ 'darwin', 'linux', 'windows' ].
-    goos:
-      - linux
-      - windows
-
-    # Default: [ '386', 'amd64', 'arm64' ].
-    goarch:
-      - amd64
 
     steps:
       - name: Checkout code
